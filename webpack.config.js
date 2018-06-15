@@ -17,9 +17,9 @@ module.exports = {
   //  new CopyWebpackPlugin([
   //    { from: './app/home.html', to: "home.html" }
   //  ]),
-    new CopyWebpackPlugin([
-      { from: './app/bitcheck.html', to: "bitcheck.html" }
-    ])
+   // new CopyWebpackPlugin([
+   //   { from: './app/bitcheck.html', to: "bitcheck.html" }
+   // ])
   ],
   module: {
     rules: [
