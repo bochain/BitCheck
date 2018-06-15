@@ -1,0 +1,217 @@
+
+.background-container {
+//  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/*body {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 10%;
+  font-family: "Open Sans", sans-serif;
+}*/
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+/*input {
+  width: 400px;
+  padding: 5px;
+  font-size: 1em;
+  font-family: 'Open Sans',sans-serif;
+  border:1px solid #ccc;
+  border-radius: 2px;
+
+}*/
+
+input{
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            color: #000;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1em;
+            height: 40px;
+            padding: 0 16px;
+            transition: background 0.3s ease-in-out;
+            width: 400px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #9ecaed;
+            box-shadow: 0 0 20px #9ecaed;
+        }
+
+
+button {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.button {
+    width: 130px;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 50px auto 0px;
+    background : #29f129;
+    cursor:pointer;
+}
+
+.button:hover
+{
+    background : #00C;
+
+}
+
+
+h1, h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #AAA;
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: normal;
+  color: #AAA;
+  font-size: 24px;
+}
+
+.black {
+  color: black;
+}
+
+#balance {
+  color: black;
+}
+
+.hint {
+  color: #666;
+}
+
+
+body {
+  background: #ededed;
+  //padding: 0 20px;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/*a{
+  a:link{
+    text-decoration:none;
+  },
+  a:hover{
+    text-decoration:underline;
+  }
+}*/
+
+
+h1 {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.mynav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+.mynav li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.mynav a {
+  display: block;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  padding: 7px 15px;
+}
+
+.target {
+  position: absolute;
+  border-bottom: 4px solid transparent;
+  z-index: -1;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+}
+
+.mLogoPic {
+  background: #ededed;
+  padding: 0 20px;
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+
+.bittabList ul li{
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+
+.mynav a,
+.target {
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.mycerttable{
+  border:1px solid #ddd;
+}
+
+.bitcheckTable
+      {
+          border-collapse: collapse;
+          margin: 0 auto;
+          text-align: center;
+          width: 60%;
+      }
+
+      .bitcheckTable th
+      {
+          border: 1px solid #cad9ea;
+          color: #666;
+          height: 35px;
+          width:40%;
+      }
+
+      .bitcheckTable td,th
+      {
+          border: 1px solid #cad9ea;
+          color: #666;
+          height: 35px;
+      }
+      .bitcheckTable thead th
+      {
+          background-color: #CCE8EB;
+          width: 100px;
+      }
+      .bitcheckTable tr:nth-child(odd)
+      {
+          background: #fff;
+      }
+      .bitcheckTable tr:nth-child(even)
+      {
+          background: #F5FAFA;
+      }

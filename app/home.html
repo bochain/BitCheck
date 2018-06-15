@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+    <title>BitCheck</title>
+
+      <script src="./app.js"></script>
+    <!-- <link rel="stylesheet" href="./stylesheets/main/main.css" type="text/css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" type="text/css">
+    <!-- <link rel="stylesheet" href="./stylesheets/main/style.css" type="text/css"> -->
+
+    <body>
+        <div class="background-container">
+          <br /><br />
+          <center><h1>BitCHek证书验证系统</h1></center>
+        <!-- 代码部分begin -->
+        <br /><br />
+        <div>
+        <nav class="mynav">
+          <ul class="bittabClick" id="bittabClick" >
+            <li><a href=""  class="active">BitCheck</a></li>
+            <li><a href="">证书查询</a></li>
+            <li><a href="">证书发布</a></li>
+            <li><a href="">我的证书</a></li>
+            <li><a href="">关于我们</a></li>
+          </ul>
+        </nav>
+        </div>
+        <br /><br />
+
+
+        <div class="wrap" id="wrap" style="position:relative; z-index:999;" >
+            <ul class="tabClick" id="tabClick" >
+                <li class="active">证书查询</li>
+                <li>证书发布</li>
+                <li>我的证书</li>
+                <li>关于我们</li>
+            </ul>
+
+            <div class="tabCon" style="position:relative; z-index:999;">
+                <div class="tabBox" id="tabBox">
+                    <div class="tabList tabListOne">
+                        <div>
+                            <p class="theNumber">
+                                <label>证书编号：</label>
+                                <input type="text" />
+                            </p>
+                            <p class="cartNUmber">
+                                <label>身份证号：</label>
+                                <input type="text" />
+                            </p>
+                        </div>
+                        <p class="button" id="checkButton">验证</p>
+                    </div>
+                    <div class="tabList">
+                        <div>
+                            <p class="theNumber">
+                                <label>证书编号：</label>
+                                <input type="text" />
+                            </p>
+                            <p class="cartNUmber">
+                                <label>证书名称：</label>
+                                <input type="text" />
+                            </p>
+                            <p class="cartNUmber">
+                                <label>身份证号：</label>
+                                <input type="text" />
+                            </p>
+                        </div>
+                        <p class="button" id="putButton">提交</p>
+                    </div>
+                    <div class="tabList">
+                        <table border="1">
+                            <tr class="tableTop">
+                                <td>证书名称</td>
+                                <td>团队名称</td>
+                                <td>操作</td>
+                            </tr>
+                            <tr>
+                                <td>HMY001</td>
+                                <td>火毛驴</td>
+                                <td>锁定</td>
+                            </tr>
+                            <tr>
+                                <td>HMY001</td>
+                                <td>火毛驴</td>
+                                <td>锁定</td>
+                            </tr>
+                            <tr>
+                                <td>HMY001</td>
+                                <td>火毛驴</td>
+                                <td>锁定</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tabList">
+                        <div class="MyOwn">
+                            <div class="one">
+
+                            </div>
+                            <div class="two">HMY</div>
+                            <div class="three">
+                                <p>一个区块链技术团队，一个区块链技术社区，一个有爱的技术社区</p>
+                            </div>
+                            <div class="four">
+                                <p>关于我们</p>
+                                <p>
+                                    <a href="">知乎</a>
+                                </p>
+                                <p>
+                                    <a href="">微信</a>
+                                </p>
+                                <p>
+                                    <a href="">FACE BOOK</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+
+        <script charset="utf-8" type="text/javascript">
+            window.onload = function () {
+                var odiv = document.getElementsByClassName("tabList");
+                var oli = document.getElementById("tabClick").getElementsByTagName("li");
+                for (var i = 0; i < oli.length; i++) {
+                    oli[i].index = i;
+                    oli[i].onclick = function () {
+                        for (var i = 0; i < oli.length; i++) {
+                            oli[i].className = '';
+                            odiv[i].style.display = "none";
+
+                        }
+                        this.className = "active"
+                        odiv[this.index].style.display = "block"
+                    }
+                }
+                
+            }
+
+        </script>
+
+
+
+        <script>
+
+        "use strict";
+
+        (function () {
+
+          var target = document.querySelector(".target");
+          var links = document.querySelectorAll(".mynav a");
+          var colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
+
+          function mouseenterFunc() {
+            if (!this.parentNode.classList.contains("active")) {
+              for (var i = 0; i < links.length; i++) {
+                if (links[i].parentNode.classList.contains("active")) {
+                  links[i].parentNode.classList.remove("active");
+                }
+                links[i].style.opacity = "0.25";
+              }
+
+              this.parentNode.classList.add("active");
+              this.style.opacity = "1";
+
+              var width = this.getBoundingClientRect().width;
+              var height = this.getBoundingClientRect().height;
+              var left = this.getBoundingClientRect().left + window.pageXOffset;
+              var top = this.getBoundingClientRect().top + window.pageYOffset;
+              var color = colors[Math.floor(Math.random() * colors.length)];
+
+              target.style.width = width + "px";
+              target.style.height = height + "px";
+              target.style.left = left + "px";
+              target.style.top = top + "px";
+              target.style.borderColor = color;
+              target.style.transform = "none";
+            }
+          }
+
+          for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", function (e) {
+              return e.preventDefault();
+            });
+            links[i].addEventListener("mouseenter", mouseenterFunc);
+          }
+
+          function resizeFunc() {
+            var active = document.querySelector(".mynav li.active");
+
+            if (active) {
+              var left = active.getBoundingClientRect().left + window.pageXOffset;
+              var top = active.getBoundingClientRect().top + window.pageYOffset;
+
+              target.style.left = left + "px";
+              target.style.top = top + "px";
+            }
+          }
+
+          window.addEventListener("resize", resizeFunc);
+        })();
+        </script>
+
+
+
+    </body>
+
+</html>
